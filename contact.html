@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Clément Creux</title>
+    <link rel="stylesheet" href="/styles.css/navbar.css" />
+    <link rel="stylesheet" href="/styles.css/contact.css" />
+    <link
+      href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--  Fond d'écran vidéo  -->
+    <div id="hero">
+      <video autoplay muted loop>
+        <source src="/Vidéos/215697.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <!-- Barre de navigation (menu) -->
+    <nav class="nav">
+      <div class="nav-list">
+        <a href="/index.html">
+          <i class="bx bx-home-alt-3"></i>
+          <span class="tooltip">Accueil</span>
+        </a>
+        <a href="/apropos.html">
+          <i class="bx bx-user"></i>
+          <span class="tooltip">À propos</span>
+        </a>
+        <a href="/monparcours.html">
+          <i class="bx bx-message-detail"></i>
+          <span class="tooltip">Mon parcours</span>
+        </a>
+        <a href="/portfolio.html">
+          <i class="bx bx-briefcase-alt-2"></i>
+          <span class="tooltip">Portfolio</span>
+        </a>
+        <a class="active">
+          <i class="bx bx-envelope"></i>
+          <span class="tooltip">Contact</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Pages -->
+    <div class="container">
+      <div class="box">
+        <!-- home (Page Contact) -->
+        <section class="section contact">
+          <h2 class="title"></h2>
+          <div class="contact-wrapper">
+            <form action="" class="contact-form">
+              <h3>Travaillons ensemble !</h3>
+              <div class="field-box">
+                <input type="text" placeholder="Nom et Prénom" required />
+                <input type="email" placeholder="Adresse E-mail" required />
+                <input type="text" placeholder="Numéro de téléphone" required />
+                <input type="text" placeholder="Objet..." required />
+                <textarea
+                  name=""
+                  id=""
+                  placeholder="Message..."
+                  required
+                ></textarea>
+              </div>
+              <div class="contact-btn">
+                <button type="submit" class="btn">Envoyer</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

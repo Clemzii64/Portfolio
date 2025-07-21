@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/*-- Les variables --*/
+:root {
+    --nav-bg-color: rgba(255, 225, 255, .1);
+    --bg-color: #171f2b;
+    --second-bg-color: #1f2733;
+    --third-bg-color: #2d3542;
+    --main-color: rgb(73, 167, 255);
+    --white-color: #fff;
+    --tab-list-color: #7c8594; 
+    --desc-fond-color: rgba(255, 255, 255, 0.1);
+}
+
+::selection {
+    background: var(--main-color);
+    color: var(--bg-color);
+}
+
+::-webkit-scrollbar {
+    width: .5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 1rem;
+}
+
+::placeholder {
+    color: var(--white-color);
+}
+
+/*-- Coprs de page --*/
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: var(--white-color);
+    overflow: hidden;
+}
+
+#hero video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+/*-- Pages --*/
+
+.portfolio-item:hover .work-info {
+    visibility: visible;
+    opacity: 1;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    perspective: 1500px;
+    perspective-origin: 50%;
+}
+
+.container .box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    padding: 0 10%;
+    backface-visibility: hidden;
+}
+
+
+/*-- Page Information --*/
+.portfolio {
+    padding-top: 2rem;
+    padding-bottom: 28rem;
+}
+
+.title {
+    display: flex;
+    font-size: 4rem;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.tab-box {
+    display: flex;
+    width: 100%;
+    height: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tab-list {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    border-bottom: .3rem solid var(--tab-list-color);
+    color: var(--tab-list-color);
+    transition: .5s;
+}
+
+.tab-list.portfolio-list.active {
+    border-color: var(--main-color);
+    color: var(--main-color);
+}
+
+.tab-list h3 {
+    font-size: 2.5rem;
+}
+
+.portfolio-list:nth-child(2) {
+justify-content: flex-end;
+}
+
+.tab-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.tab-grid {
+    position: absolute;
+    width: 100%;
+    height: 104%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(49rem, 1fr));
+    gap: 2rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(.8);
+}
+
+.tab-grid.portfolio-box.active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    transition: .5s;
+}
+
+.portfolio-box.Travail .portfolio-item {
+    position: relative;
+}
+
+.portfolio-box.Travail .portfolio-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--third-bg-color);
+    border-radius: .8rem;
+    z-index: 1;
+    opacity: 0;
+    transition: .3s;
+}
+
+.portfolio-box.Travail .portfolio-item:hover::before {
+    opacity: .9;
+}
+
+.tab-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--desc-fond-color);
+    -webkit-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.tab-item h4 {
+    font-size: 2.3rem;
+
+}
+
+.tab-item p {
+    margin-top: 1rem;
+}
+
+
+.portfolio-item .work-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: .8rem;
+    overflow: hidden;
+}
+
+.portfolio-item .work-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .3s;
+}
+
+.portfolio-item:hover .work-img img {
+    transform: scale(1.2);
+}
+
+.portfolio-item .work-info {
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+}
+
+.portfolio-item .work-info h4 {
+    line-height: 1;
+}
+
+.portfolio-item .work-info .tech-used {
+    color: var(--main-color);
+    border-radius: .1rem solid var(--white-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.portfolio-item .portfolio-icon a {
+    position: relative;
+    display: inline-flex;
+    padding: 1rem;
+    background: var(--white-color);
+    border-radius: 50%;
+    font-size: 2.5rem;
+    color: var(--bg-color);
+    transition: .3s;
+}
+
+.portfolio-item .work-icon a:hover,
+.portfolio-item .service-icon a:hover {
+    background: var(--main-color);
+    color: var(--white-color);
+}
+
+.portfolio-item .work-icon a:nth-child(1) {
+    margin-right: 1rem;
+}
+
+.portfolio-item .service-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+.portfolio-item .service-icon .icon {
+    font-size: 5rem;
+    margin-left: -.3rem;
+    color: var(--main-color);
+    transition: .3s;
+}
+
+.tab-item.portfolio-item h4 {
+    color: var(--main-color);
+    
+}
+
+
+/*-- Responsive Mobile --*/
+
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .section {
+    padding: 0 4%;
+    }
+
+    .resume,
+    .portfolio {
+        padding-top: 1.5rem;
+        padding-bottom: 27rem;
+    }
+
+    .contact {
+        padding-top: 1.5rem;
+        padding-bottom: 18rem;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+
+    .home,
+    .about {
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 2rem;
+        padding-bottom: 6rem;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .img-box {
+        width: 35rem;
+        height: 35rem;
+    }
+
+    .resume,
+    .portfolio {
+        padding-bottom: 25rem;
+    }
+
+    .contact {
+        padding-bottom: 16rem;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .resume,
+    .portfolio {
+        padding-top: 1rem;
+        padding-bottom: 28rem;
+    }
+
+    .tab-box {
+        margin-top: 0;
+    }
+
+
+    .contact {
+        padding-top: 1rem;
+    }
+
+    .tab-list h3 {
+        font-size: 2.1rem;
+    }
+
+.tab-grid {
+
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+}
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .home-info,
+    .about-info {
+        text-align: center;
+    }
+
+    .about-info h1 {
+        font-size: 5rem;
+    }
+
+    .home-info .btn-sci {
+        flex-direction: column-reverse;
+    }
+
+    .home-info .btn-sci .sci {
+        margin-left: 0;
+        margin-bottom: 2rem;
+    }
+
+    .img-box {
+        width: 30rem;
+        height: 30rem;
+    }
+
+    .about-info .title {
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+    .img-box {
+        width: 25rem;
+        height: 25rem;
+    }
+
+    .tab-list h3 {
+        font-size: 2.3rem;
+    }
+
+}
