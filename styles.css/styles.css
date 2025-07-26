@@ -172,7 +172,7 @@ box-shadow: 0 0 8rem var(--main-color);
     }
 
     .section {
-        top: 5%;
+        top: 8%;
     }
 
     .home {
@@ -188,7 +188,7 @@ box-shadow: 0 0 8rem var(--main-color);
 
     .home-info .btn-sci .sci {
         margin-left: 0;
-        margin-bottom: 10%;
+        margin-bottom: 15%;
     }
 
 }
@@ -197,7 +197,7 @@ box-shadow: 0 0 8rem var(--main-color);
 
 
     .section {
-        top: 8%;
+        top: 10%;
     }
 
     .home-info .btn-sci .sci {
@@ -215,7 +215,7 @@ box-shadow: 0 0 8rem var(--main-color);
 @media screen and (max-width: 400px) {
 
     .section {
-        top: 30%;
+        top: 40%;
     }
 
     .home-info {
