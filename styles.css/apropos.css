@@ -278,7 +278,7 @@ p {
 @media screen and (max-width: 400px) {
 
     .section {
-        top: 50%;
+        top: 40%;
     }
 
     .about-info {
