@@ -49,13 +49,10 @@ html {
 
 body {
     color: var(--white-color);
-    overflow: hidden;
 }
 
 #hero video {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -67,24 +64,10 @@ p {
 }
 
 /*-- Pages --*/
-.container {
-    width: 100vw;
-    height: 100vh;
-    perspective: 1500px;
-    perspective-origin: 50%;
-}
-
-.container .box {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
 .section {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-size: cover;
     padding: 0 10%;
     backface-visibility: hidden;
 }
@@ -95,17 +78,20 @@ p {
     gap: 15rem;
 }
 
-/*-- Page Information --*/
+/*-- Titre --*/
 .home-info h1 {
     font-size: 5.5rem;
     color: var(--main-color);
     line-height: 1;
 }
 
+/*-- Sous titre --*/
+
 .home-info h3 {
     font-size: 3rem;
 }
 
+/*-- Description --*/
 .desc {
     margin: 1rem 0 2rem;
     background: var(--desc-fond-color);
@@ -113,37 +99,9 @@ p {
     backdrop-filter: blur(10px);
     padding: 1.5rem;
     border-radius: 20px;
-
 }
 
-.home-info .btn-sci {
-    display: flex;
-    align-items: center;
-}
-
-.btn {
-    display: inline-flex;
-    padding: 1.2rem 3rem;
-    background: var(--main-color);
-    -webkit-backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border-radius: 5rem;
-    box-shadow: 0 0 1rem var(--main-color);
-    font-size: 1.6rem;
-    color: var(--bg-color);
-    font-weight: 600;
-    transition: .3s;
-}
-
-.btn:hover {
-    box-shadow: none;
-}
-
-.home-info .btn-sci .sci {
-    margin-left: 2rem;
-}
-
+/*-- Bouton --*/
 .home-info .btn-sci .sci a {
     position: relative;
     display: inline-flex;
@@ -162,7 +120,6 @@ p {
 }
 
 /*-- Page Image profil --*/
-
 .img-box {
     position: relative;
     width: 25vw;
@@ -189,30 +146,22 @@ box-shadow: 0 0 8rem var(--main-color);
     object-fit: cover;
 }
 
-
-
 /*-- Responsive Mobile --*/
 
 @media screen and (max-width: 1200px) {
     html {
         font-size: 55%;
     }
+
+    .img-box {
+        width: 40rem;
+        height: 40rem;
+    }
 }
 
 @media screen and (max-width: 992px) {
     .section {
     padding: 0 4%;
-    }
-
-    .resume,
-    .portfolio {
-        padding-top: 1.5rem;
-        padding-bottom: 27rem;
-    }
-
-    .contact {
-        padding-top: 1.5rem;
-        padding-bottom: 18rem;
     }
 
 }
@@ -222,16 +171,10 @@ box-shadow: 0 0 8rem var(--main-color);
         font-size: 50%;
     }
 
-    .home,
-    .about {
+    .home {
         flex-direction: column-reverse;
         justify-content: center;
         gap: 2rem;
-        padding-bottom: 6rem;
-    }
-
-    .about {
-        flex-direction: column;
     }
 
     .img-box {
@@ -239,43 +182,24 @@ box-shadow: 0 0 8rem var(--main-color);
         height: 35rem;
     }
 
-    .resume,
-    .portfolio {
-        padding-bottom: 25rem;
-    }
-
-    .contact {
-        padding-bottom: 16rem;
-    }
-
 }
 
 @media screen and (max-width: 600px) {
-    .resume,
-    .portfolio {
-        padding-top: 1rem;
-        padding-bottom: 22rem;
-    }
 
     .tab-box {
         margin-top: 0;
     }
 
-
-    .contact {
-        padding-top: 1rem;
-    }
 }
 
 @media screen and (max-width: 400px) {
 
-    .home-info,
-    .about-info {
-        text-align: center;
+    .section {
+        top: 25%;
     }
 
-    .about-info h1 {
-        font-size: 5rem;
+    .home-info {
+        text-align: center;
     }
 
     .home-info .btn-sci {
@@ -284,16 +208,12 @@ box-shadow: 0 0 8rem var(--main-color);
 
     .home-info .btn-sci .sci {
         margin-left: 0;
-        margin-bottom: 2rem;
+        margin-bottom: 30%;
     }
 
     .img-box {
         width: 30rem;
         height: 30rem;
-    }
-
-    .about-info .title {
-        text-align: center;
     }
 
 }

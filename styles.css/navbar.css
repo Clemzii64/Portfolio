@@ -23,37 +23,6 @@
     --tab-list-color: #7c8594; 
 }
 
-::selection {
-    background: var(--main-color);
-    color: var(--bg-color);
-}
-
-::-webkit-scrollbar {
-    width: .5rem;
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--main-color);
-    border-radius: 1rem;
-}
-
-::placeholder {
-    color: var(--white-color);
-}
-
-/*-- Coprs de page --*/
-html {
-    font-size: 62.5%;
-}
-
-body {
-    color: var(--white-color);
-    overflow: hidden;
-}
-
-p {
-    font-size: 1.6rem;
-}
 
 /*-- Barre de navigation --*/
 
