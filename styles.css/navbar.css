@@ -14,7 +14,7 @@
 
 /*-- Les variables --*/
 :root {
-    --nav-bg-color: rgba(255, 225, 255, .1);
+    --nav-bg-color: rgba(255, 225, 255, 0.1);
     --bg-color: #171f2b;
     --second-bg-color: #1f2733;
     --third-bg-color: #2d3542;
@@ -22,7 +22,6 @@
     --white-color: #fff;
     --tab-list-color: #7c8594; 
 }
-
 
 /*-- Barre de navigation --*/
 
@@ -34,8 +33,8 @@
     width: 40rem;
     padding: 2rem 0;
     background: var(--nav-bg-color);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
     border-radius: 5rem;
     z-index: 100;
 }
