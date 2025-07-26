@@ -33,8 +33,8 @@
     width: 40rem;
     padding: 2rem 0;
     background: var(--nav-bg-color);
-    -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
     border-radius: 5rem;
     z-index: 100;
 }
